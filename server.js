@@ -10,6 +10,7 @@ server.use(cors())
 
 const locationIq = require('./modules/locationIq')
 const weather = require('./modules/weather')
+const getMovies = require('./modules/getMovies')
 
 
 // home server
@@ -20,6 +21,9 @@ server.get('/location', locationIq)
 
 // weatherbit server get
 server.get('/weather', weather)
+
+// movie server get
+server.get('/movies', getMovies)
 
 // location Iq function
 function home (req, res) {
